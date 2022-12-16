@@ -9,15 +9,15 @@ import {PokemonListPage} from './pages/PokemonListPage/PokemonListPage'
 function App() {
 
   const [page, setPage] = useState(1)
-  const [nameButton, setNameButton] = useState("Pokedex")
+  const [nameButton, setNameButton] = useState("Pokédex")
 
   const changePage = () => {
     if(page === 1){
       setPage(2);
-      setNameButton("Todos os pokemons")
+      setNameButton("Todos Pokémons")
     }else{
       setPage(1);
-      setNameButton("Pokedex")
+      setNameButton("Pokédex")
     }
   }
 

@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { GlobalContext } from "../../../context/GlobalContext"
+import {BackButton} from './style'
 
 export const GoToList = () => {
 
@@ -7,6 +8,8 @@ export const GoToList = () => {
     const {nameButton, changePage} = context
 
     return(
-        <button>csdd</button>
+        <div>
+        <BackButton onClick={changePage}>&lt; {nameButton}</BackButton>
+        </div>
     )
 }

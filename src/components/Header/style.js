@@ -7,5 +7,6 @@ export const HeaderGlobal = styled.header `
     width: 100%;
     justify-content: center;
     border-bottom:1px solid black;
-
+    height: 18vh;
+    position: relative;
 `

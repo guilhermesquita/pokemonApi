@@ -1,14 +1,15 @@
 import { GlobalContext } from '../../../context/GlobalContext'
 import { useContext, useState } from 'react'
+import {PokedexButton} from './style'
 
 export const GoToPokedex = () => {
  
     const context = useContext(GlobalContext);
-    const {changeButton, changePage} = context
+    const {nameButton, changePage} = context
 
     return(
-        <>
-            <button>ccsdcsdcs</button>
-        </>
+        
+        <PokedexButton onClick={changePage}>{nameButton}</PokedexButton>
+        
     )
 }

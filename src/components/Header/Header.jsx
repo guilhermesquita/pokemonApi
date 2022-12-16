@@ -12,8 +12,11 @@ export const Header = () => {
 
     return (
     <HeaderGlobal>
-        {nameButton === "Pokedex" ? <GoToPokedex/> : <GoToList/>}
+        <article>
+        {nameButton === "Todos Pokémons" ? <GoToList/> : <></>}
+        </article>
         <img src={pokemon} width='200'/>
+        {nameButton === "Pokédex" ? <GoToPokedex/> : <></>}
     </HeaderGlobal>
     )
 }
