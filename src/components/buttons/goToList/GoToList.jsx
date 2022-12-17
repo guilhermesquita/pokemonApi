@@ -5,11 +5,9 @@ import {BackButton} from './style'
 export const GoToList = () => {
 
     const context = useContext(GlobalContext);
-    const {nameButton, changePage} = context
+    const {nameButton, changePageToList} = context
 
     return(
-        <div>
-        <BackButton onClick={changePage}>&lt; {nameButton}</BackButton>
-        </div>
+        <BackButton onClick={changePageToList}>&lt; Todos os Pokémons</BackButton>
     )
 }
