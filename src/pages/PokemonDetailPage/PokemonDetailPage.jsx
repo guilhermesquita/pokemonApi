@@ -1,5 +1,9 @@
+import {PokedexStyleDetail} from './style'
+
 export const PokemonDetailPage = () =>{
     return(
-        <h1>Detalhes do Pokemon</h1>
+        <PokedexStyleDetail>
+            <p>Detalhes do Pokemon</p>
+        </PokedexStyleDetail>
     )
 }

@@ -9,8 +9,10 @@ export const PokemonCard = () => {
 
     return(
         <Card>
-            <button onClick={changePageToTrash}>Detalhes</button>
-            <button onClick={capturedPokemon}>{capture}</button>
+            <article>
+                <button onClick={changePageToTrash}>Detalhes</button>
+                <button onClick={capturedPokemon}>{capture}</button>
+            </article>
         </Card>
     )
 }

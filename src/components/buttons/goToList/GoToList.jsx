@@ -8,6 +8,6 @@ export const GoToList = () => {
     const {nameButton, changePageToList} = context
 
     return(
-        <BackButton onClick={changePageToList}>&lt; Todos os Pokémons</BackButton>
+        <BackButton onClick={changePageToList}>&lt; Todos Pokémons</BackButton>
     )
 }
