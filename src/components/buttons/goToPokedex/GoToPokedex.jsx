@@ -1,15 +1,17 @@
 import { GlobalContext } from '../../../context/GlobalContext'
 import { useContext} from 'react'
 import {PokedexButton} from './style'
+import { useNavigate } from 'react-router-dom';
+import {changePageToPokedex} from '../../../routes/coordinator'
 
 export const GoToPokedex = () => {
  
     const context = useContext(GlobalContext);
-    const {nameButton, changePageToPokedex} = context
+    const {nameButton} = context
 
-    return(
-        
-        <PokedexButton onClick={changePageToPokedex}>{nameButton}</PokedexButton>
-        
+    const navigate = useNavigate()
+
+    return(        
+        <PokedexButton onClick={() => changePageToPokedex(navigate)}>{nameButton}</PokedexButton>
     )
 }

@@ -1,13 +1,14 @@
 import { useContext } from "react"
+import { useNavigate } from "react-router-dom"
 import { GlobalContext } from "../../../context/GlobalContext"
 import {BackButton} from './style'
+import {changePageToList} from '../../../routes/coordinator'
 
 export const GoToList = () => {
 
-    const context = useContext(GlobalContext);
-    const {nameButton, changePageToList} = context
+    const navigate = useNavigate()
 
     return(
-        <BackButton onClick={changePageToList}>&lt; Todos Pokémons</BackButton>
+        <BackButton onClick={() => changePageToList(navigate)}>&lt; Todos Pokémons</BackButton>
     )
 }
