@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { GlobalContext } from "../../context/GlobalContext";
 
 export const HeaderGlobal = styled.header `
     display: flex;
@@ -9,4 +7,7 @@ export const HeaderGlobal = styled.header `
     border-bottom:1px solid black;
     height: 18vh;
     position: relative;
+    img{
+        cursor: pointer;
+    }
 `
