@@ -5,7 +5,7 @@ import { GlobalStyle } from "./globalStyle"
 import { Main } from "./style"
 import { Router } from "./routes/Routes"
 import { BrowserRouter } from "react-router-dom"
-import { Api } from "./testett/Api"
+
 
 function App() {
 
@@ -30,7 +30,6 @@ function App() {
         <Header/>
         <Main>
           <Router/>
-          <Api/>
         </Main>
       </BrowserRouter>
     </GlobalContext.Provider>

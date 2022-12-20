@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const Card = styled.section `
     font-family: "Poppins", 'Courier New', Courier, monospace;
     background-color: #71C3FF;
-    max-width: 20%;
-    height: 19vh;
+    width: 30%;
+    height: 30vh;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    article:nth-child(1){
+    article:nth-child(2){
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -30,7 +31,7 @@ export const Card = styled.section `
             background-color: #FFFFFF;
             text-align: center;
             width: 40%;
-            height: 20%;
+            height: 40px;
             border: none;
             border-radius: 5px;
         }

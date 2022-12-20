@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import {PokemonCard} from '../../components/PokemonCard/PokemonCard'
 import { GlobalContext } from '../../context/GlobalContext';
 import {ListPage} from './style'
+import {useRequestDataApi} from '../../hooks/ResquestDataApi'
 
 export const PokemonListPage = () => {
 
@@ -9,10 +10,16 @@ export const PokemonListPage = () => {
     const {setNameButton} = context
     setNameButton('Pokédex')
 
+    const pokemonList = useRequestDataApi()
+
     return(
         <ListPage>
             <p>Todos Pokémons</p>
-            <PokemonCard/>
+            <article>
+                {pokemonList.map((pokemon, index)=>{
+                    return <PokemonCard pokemon={pokemon} key={index}/>
+                })}
+            </article>
         </ListPage>
     )
 }
