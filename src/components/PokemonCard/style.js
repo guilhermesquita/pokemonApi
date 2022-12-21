@@ -10,7 +10,21 @@ export const Card = styled.section `
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
+
+    position: relative;
+
     article:nth-child(2){
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border: 1px solid black;
+        img{
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    article:nth-child(3){
         display: flex;
         width: 100%;
         justify-content: space-between;
