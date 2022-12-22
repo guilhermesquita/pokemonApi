@@ -14,19 +14,25 @@ export const Card = styled.section `
     font-family: "Poppins", 'Courier New', Courier, monospace;
     background-color: #71C3FF;
     width: 28vw;
-    height: 30vh;
+    height: 27vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    position: relative;
-    gap: 20px;
-    article:nth-child(3){
+    gap: 14px;
+    img{
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 44%;
+    }
+    article:nth-child(4){
         margin-top: 50px;
         display: flex;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
         button{height: 20px;}
         button:nth-child(1){
             cursor: pointer;

@@ -5,6 +5,7 @@ import { Card, SectionMain } from "./style"
 import {changeToDetails} from '../../routes/coordinator'
 import { ApiContext } from "../../context/ApiContext"
 import {useRequestDataApi} from '../../hooks/ResquestDataApi'
+import pokeballBack from '../../assets/pngwing.svg'
 
 export const PokemonCard = () => {
     
@@ -23,8 +24,8 @@ export const PokemonCard = () => {
     return(
         <SectionMain>
             <img src={pokemonImgMain} width={'45%'}/>
-
             <Card>
+                <img src={pokeballBack}/>
                 <header>
                     #0{id}<br/>
                     {pokemon.name}
