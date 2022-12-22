@@ -18,6 +18,6 @@ export const ListPage = styled.section `
         display: flex;
         flex-wrap: wrap;
         gap: 2%;
-        row-gap: 5vh;
+        row-gap: 12vh;
     }
 `

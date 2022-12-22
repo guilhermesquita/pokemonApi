@@ -1,30 +1,29 @@
 import styled from "styled-components";
 
+export const SectionMain = styled.section`
+    position: relative;
+    img{
+        position: absolute;
+        z-index: 1;
+        left: 55%;
+        bottom: 50%;
+    }
+`
+
 export const Card = styled.section `
     font-family: "Poppins", 'Courier New', Courier, monospace;
     background-color: #71C3FF;
-    width: 30%;
+    width: 28vw;
     height: 30vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-
     position: relative;
-
-    article:nth-child(2){
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border: 1px solid black;
-        img{
-            position: absolute;
-            top: 0;
-        }
-    }
-
+    gap: 20px;
     article:nth-child(3){
+        margin-top: 50px;
         display: flex;
         width: 100%;
         justify-content: space-between;
