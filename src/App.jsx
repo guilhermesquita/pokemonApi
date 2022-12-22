@@ -20,7 +20,8 @@ function App() {
     nameButton: nameButton,
     setNameButton: setNameButton,
     capture: capture,
-    capturedPokemon: capturedPokemon,
+    setCapture: setCapture,
+    capturedPokemon: capturedPokemon
   }
 
   return(

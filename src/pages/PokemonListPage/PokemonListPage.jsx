@@ -12,21 +12,37 @@ export const PokemonListPage = () => {
     setNameButton('Pokédex')
 
     const [pokemonList, imgMain] = useRequestDataApi('')
-    
+    const [capture, setCapture] = useState('Capturar')
+
+    let [arr, setArr] = useState([])
+
+    for (let i = 0; i < pokemonList.length; i++){
+        arr.push(capture)
+    }
+
+    console.log(arr)
+
+
     return(
         <ListPage>
             <p>Todos Pokémons</p>
             <article>
                {pokemonList.map((pokemon, index)=>{
-                
+
+                    let i = 0
+                    //console.log(i++)
+
                     const apiContext = 
                     {
                         pokemon: pokemon,
-                        id: index + 1
+                        id: index + 1,
+                        index: index,
+                        arr: arr,
+                        setArr: setArr
                     }
 
                     return(
-                        <ApiContext.Provider value={apiContext}>
+                        <ApiContext.Provider value={apiContext} key={index}>
                             <PokemonCard/>
                         </ApiContext.Provider>)
                 })}

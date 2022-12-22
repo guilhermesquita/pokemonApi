@@ -11,13 +11,17 @@ export const PokemonCard = () => {
     
     //GlobalContext
     const context = useContext(GlobalContext)
-    const { capture, capturedPokemon } = context
+    const { capture } = context
 
     //ApiContext
     const apiContext = useContext(ApiContext)
-    const { pokemon, id } = apiContext
+    const { pokemon, id, arr, setArr } = apiContext
 
     const [listPokemon, pokemonImgMain] = useRequestDataApi(id)
+
+    const changeButtonSelect = (idPok) =>{
+        setArr  (['csd'])
+    }
 
     const navigate = useNavigate()
 
@@ -38,7 +42,7 @@ export const PokemonCard = () => {
 
                 <article>
                     <button onClick={()=> changeToDetails(navigate)}>Detalhes</button>
-                    <button onClick={capturedPokemon}>{capture}</button>
+                    <button onClick={changeButtonSelect(id)}>{capture}</button>
                 </article>
             </Card>
         </SectionMain>

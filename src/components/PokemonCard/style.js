@@ -53,6 +53,7 @@ export const Card = styled.section `
             height: 40px;
             border: none;
             border-radius: 5px;
+            z-index: 1;
         }
     }
 `
