@@ -23,17 +23,17 @@ export const PokemonCard = () => {
 
     return(
         <SectionMain>
-            <img src={pokemonImgMain} width={'45%'}/>
+            <img src={pokemonImgMain} width={'40%'}/>
             <Card>
-                <img src={pokeballBack}/>
+                <img src={pokeballBack} height={'100%'} width={'65%'}/>
                 <header>
-                    #0{id}<br/>
-                    {pokemon.name}
+                    <span>#0{id}</span>
+                    <h2>{pokemon.name}</h2>
                 </header>
                 
                 <article>
-                    <button>skill1</button>
-                    <button>skill2</button>
+                    <div>skill1</div>
+                    <div>skill2</div>
                 </article>
 
                 <article>

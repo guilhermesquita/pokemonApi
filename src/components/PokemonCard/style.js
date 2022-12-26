@@ -13,19 +13,28 @@ export const SectionMain = styled.section`
 export const Card = styled.section `
     font-family: "Poppins", 'Courier New', Courier, monospace;
     background-color: #71C3FF;
-    width: 28vw;
-    height: 27vh;
+    min-width: 29vw;
+    min-height: 25vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
     gap: 14px;
+    padding-bottom: 10px;
     img{
         position: absolute;
         z-index: 0;
         top: 0;
-        left: 44%;
+        left: 35%;
+    }
+    header{
+        span{
+            font-size: 12px;
+        }
+        h2{
+            color: #FFFFFF;
+        }
     }
     article:nth-child(4){
         margin-top: 50px;
@@ -50,7 +59,7 @@ export const Card = styled.section `
             background-color: #FFFFFF;
             text-align: center;
             width: 40%;
-            height: 40px;
+            height: 32px;
             border: none;
             border-radius: 5px;
         }

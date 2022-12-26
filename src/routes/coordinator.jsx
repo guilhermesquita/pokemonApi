@@ -1,11 +1,11 @@
 export const changePageToList = (navigate) => {
-    navigate('/');
-  }
+  navigate('/');
+}
 
-  export const changePageToPokedex = (navigate) => {
-    navigate('/pokedex');
-  }
+export const changePageToPokedex = (navigate) => {
+  navigate('/pokedex');
+}
 
-  export const changeToDetails = (navigate) => {
-    navigate(':pokemon')
-  }
+export const changeToDetails = (navigate, pokemon) => {
+  navigate(`:${pokemon}`)
+}
