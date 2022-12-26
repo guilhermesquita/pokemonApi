@@ -11,16 +11,23 @@ export const PokemonCard = () => {
     
     //GlobalContext
     const context = useContext(GlobalContext)
-    const { capture } = context
+    const { capture, setNamePokemon, namePokemon } = context
 
     //ApiContext
     const apiContext = useContext(ApiContext)
     const { pokemon, id, arr, setArr } = apiContext
 
-    const [listPokemon, pokemonImgMain] = useRequestDataApi(id)
+    const [listPokemon, pokemonImgMain, loadingImg] = useRequestDataApi(id)
 
     const changeButtonSelect = (idPok) =>{
-        setArr  (['csd'])
+        setArr(['c'])
+        // for(let i in arr){
+        //     if(i===idPok){
+        //         alert('d')
+        //     }
+        // }
+        //setIdAr(arr[idPok])
+        //console.log(arr[idPok])
     }
 
     const navigate = useNavigate()
@@ -41,8 +48,8 @@ export const PokemonCard = () => {
                 </article>
 
                 <article>
-                    <button onClick={()=> changeToDetails(navigate)}>Detalhes</button>
-                    <button onClick={changeButtonSelect(id)}>{capture}</button>
+                    <button onClick={()=> changeToDetails(navigate, pokemon.name, setNamePokemon)}>Detalhes</button>
+                    <button onClick={changeButtonSelect(id)}>{arr[id]}</button>
                 </article>
             </Card>
         </SectionMain>

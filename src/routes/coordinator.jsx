@@ -6,6 +6,7 @@ export const changePageToList = (navigate) => {
     navigate('/pokedex');
   }
 
-  export const changeToDetails = (navigate) => {
-    navigate(':pokemon')
+  export const changeToDetails = (navigate, pokemon, setNamePokemon) => {
+    navigate(`:${pokemon}`)
+    setNamePokemon(pokemon)
   }

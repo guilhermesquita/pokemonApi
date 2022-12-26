@@ -11,7 +11,7 @@ export const PokemonListPage = () => {
     const {setNameButton} = context
     setNameButton('Pokédex')
 
-    const [pokemonList, imgMain] = useRequestDataApi('')
+    const [pokemonList, imgMain, loadingPokemon] = useRequestDataApi('')
     const [capture, setCapture] = useState('Capturar')
 
     let [arr, setArr] = useState([])
@@ -27,10 +27,9 @@ export const PokemonListPage = () => {
         <ListPage>
             <p>Todos Pokémons</p>
             <article>
-               {pokemonList.map((pokemon, index)=>{
-
-                    let i = 0
-                    //console.log(i++)
+               
+               {loadingPokemon?<p>'Carregando'</p>:
+               pokemonList.map((pokemon, index)=>{
 
                     const apiContext = 
                     {
