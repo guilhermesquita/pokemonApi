@@ -22,6 +22,7 @@ export const Card = styled.section `
     padding-right: 30px;
     gap: 14px;
     padding-bottom: 10px;
+    padding-top: 12px;
     img{
         position: absolute;
         z-index: 0;
@@ -31,13 +32,15 @@ export const Card = styled.section `
     header{
         span{
             font-size: 12px;
+            color: #FFFFFF;
+            font-weight: 700;
         }
         h2{
             color: #FFFFFF;
         }
     }
     article:nth-child(4){
-        margin-top: 50px;
+        margin-top: 20px;
         display: flex;
         width: 100%;
         justify-content: space-between;

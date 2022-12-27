@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ListPage = styled.section `
     padding-top: 10vh;
-    padding-left: 80px;
+    padding-left: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;

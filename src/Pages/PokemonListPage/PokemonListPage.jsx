@@ -26,8 +26,8 @@ export const PokemonListPage = () => {
                     }
 
                     return(
-                        <ApiContext.Provider value={apiContext}>
-                            <PokemonCard/>
+                        <ApiContext.Provider value={apiContext} key={index}>
+                            <PokemonCard key={index}/>
                         </ApiContext.Provider>)
                 })}
             </article>
