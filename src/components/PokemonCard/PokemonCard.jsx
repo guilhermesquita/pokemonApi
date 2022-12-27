@@ -15,11 +15,11 @@ export const PokemonCard = () => {
 
     //ApiContext
     const apiContext = useContext(ApiContext)
-    const { pokemon, id } = apiContext
+    const { pokemon, id, } = apiContext
 
     /////////
 
-    const [listPokemon, pokemonImgMain] = useRequestDataApi(id)
+    const [listPokemon, pokemonImgMain, skills1, skills2] = useRequestDataApi(id)
 
     //Router-dom useNavigate()
     const navigate = useNavigate()
@@ -35,8 +35,8 @@ export const PokemonCard = () => {
                 </header>
                 
                 <article>
-                    <div>skill1</div>
-                    <div>skill2</div>
+                    <div>{skills1.name}</div>
+                    <div>{skills2.name}</div>
                 </article>
 
                 <article>

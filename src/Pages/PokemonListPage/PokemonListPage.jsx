@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import {PokemonCard} from '../../components/PokemonCard/PokemonCard'
 import { GlobalContext } from '../../context/GlobalContext';
 import {ListPage} from './style'
@@ -11,7 +11,7 @@ export const PokemonListPage = () => {
     const {setNameButton} = context
     setNameButton('Pokédex')
 
-    const [pokemonList, imgMain] = useRequestDataApi('')
+    const [pokemonList] = useRequestDataApi('')
     
     return(
         <ListPage>
@@ -22,7 +22,7 @@ export const PokemonListPage = () => {
                     const apiContext = 
                     {
                         pokemon: pokemon,
-                        id: index + 1
+                        id: index + 1,
                     }
 
                     return(
