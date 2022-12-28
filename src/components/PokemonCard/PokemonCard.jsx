@@ -1,11 +1,12 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { GlobalContext } from "../../context/GlobalContext"
-import { Card, SectionMain } from "./style"
+import { Card, SectionMain, Grass, Poison, Fire, Flying } from "./style"
 import {changeToDetails} from '../../routes/coordinator'
 import { ApiContext } from "../../context/ApiContext"
 import {useRequestDataApi} from '../../hooks/ResquestDataApi'
 import pokeballBack from '../../assets/pngwing.svg'
+import grass from '../../assets/grass.svg'
 
 export const PokemonCard = () => {
     
@@ -24,6 +25,63 @@ export const PokemonCard = () => {
     //Router-dom useNavigate()
     const navigate = useNavigate()
 
+    const types1 = (skill) => {
+        if(skill.name === 'grass'){
+            return(
+            <Grass>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Grass>)
+        } else if(skill.name === 'poison'){
+            return(
+            <Poison>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Poison>)
+        } else if(skill.name === 'fire'){
+            return(
+            <Fire>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Fire>)
+        } else if(skill.name === 'flying'){
+            return(
+            <Flying>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Flying>)
+        }
+    }
+
+    const types2 = (skill) => {
+        if(skill.name === 'grass'){
+            return(
+            <Grass>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Grass>)
+        } else if(skill.name === 'poison'){
+            return(
+            <Poison>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Poison>)
+        } else if(skill.name === 'fire'){
+            return(
+            <Fire>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Fire>)
+        } else if(skill.name === 'flying'){
+            return(
+            <Flying>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Flying>)
+        }
+    }
+
+
     return(
         <SectionMain>
             <img src={pokemonImgMain} width={'40%'}/>
@@ -35,8 +93,8 @@ export const PokemonCard = () => {
                 </header>
                 
                 <article>
-                    <div>{skills1.name}</div>
-                    <div>{skills2.name}</div>
+                    {types2(skills2)}
+                    {types1(skills1)}
                 </article>
 
                 <article>

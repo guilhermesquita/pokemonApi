@@ -68,3 +68,58 @@ export const Card = styled.section `
         }
     }
 `
+
+export const Grass = styled.section `
+    height: 10%;
+    background-color: #70B873;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
+
+export const Poison = styled.section `
+    height: 10%;
+    background-color: #AD61AE;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
+export const Fire = styled.section `
+    height: 10%;
+    background-color: #F44900;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
+
+export const Flying = styled.section `
+    height: 10%;
+    background-color: #6892B0;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
