@@ -16,7 +16,7 @@ export const PokemonCard = () => {
 
     //ApiContext
     const apiContext = useContext(ApiContext)
-    const { pokemon, id, } = apiContext
+    const { pokemon, id } = apiContext
 
     /////////
 

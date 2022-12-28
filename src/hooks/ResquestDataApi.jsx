@@ -16,6 +16,7 @@ export const useRequestDataApi = (id) => {
             setSkills1(r.data.types[0].type)
             setSkills2(r.data.types[1].type)
             setImg(r.data.sprites.other.home.front_default)
+            console.log(r.data.sprites.other.home.front_default)
         })
         .catch((e)=>console.log(e), [])
     })
