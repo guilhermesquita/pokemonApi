@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { GlobalContext } from "../../context/GlobalContext"
-import { Card, SectionMain, Grass, Poison, Fire, Flying } from "./style"
+import { Card, SectionMain, Grass, Poison, Fire, Flying, Water, Bug, Normal } from "./style"
 import {changeToDetails} from '../../routes/coordinator'
 import { ApiContext } from "../../context/ApiContext"
 import {useRequestDataApi} from '../../hooks/ResquestDataApi'
@@ -51,6 +51,26 @@ export const PokemonCard = () => {
                 {skill.name}
             </Flying>)
         }
+        else if(skill.name === 'water'){
+            return(
+            <Water>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Water>)
+        }
+        else if(skill.name === 'bug'){
+            return(
+            <Bug>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Bug>)
+        } else if(skill.name === 'normal'){
+            return(
+            <Normal>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Normal>)
+        }
     }
 
     const types2 = (skill) => {
@@ -78,6 +98,26 @@ export const PokemonCard = () => {
                 {/* <img src={grass}/> */}
                 {skill.name}
             </Flying>)
+        }
+        else if(skill.name === 'water'){
+            return(
+            <Water>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Water>)
+        }
+        else if(skill.name === 'bug'){
+            return(
+            <Bug>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Bug>)
+        } else if(skill.name === 'normal'){
+            return(
+            <Normal>
+                {/* <img src={grass}/> */}
+                {skill.name}
+            </Normal>)
         }
     }
 

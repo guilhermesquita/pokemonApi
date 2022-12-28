@@ -123,3 +123,43 @@ export const Flying = styled.section `
     border-radius: 8px;
     align-items: center;
 `
+export const Water = styled.section `
+    height: 10%;
+    background-color: #33A4F5;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
+
+export const Bug = styled.section `
+    height: 10%;
+    background-color: #316520;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
+export const Normal = styled.section `
+    height: 10%;
+    background-color: #8a8a8a;
+    width: 20%;
+    text-align: center;
+    z-index: 1;
+    font-family: "Poppins", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    color: #FFFF;
+    border: 1px dashed #FFFF;
+    border-radius: 8px;
+    align-items: center;
+`
