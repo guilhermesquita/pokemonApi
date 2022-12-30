@@ -12,15 +12,13 @@ export const useRequestDataApi = (id) => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((r)=>{
             setPokemons(r.data.results)
-            //console.log(r.data)
-            setSkills1(r.data.types[0].type)
-            if(r.data.types[1].type === ''){
-                setSkills2('')
-            }else{
+           if(r.data.types.length == 2){
+                setSkills1(r.data.types[0].type)
                 setSkills2(r.data.types[1].type)
+            }else{
+                setSkills1(r.data.types[0].type)    
             }
-            setImg(r.data.sprites.other.home.front_default)
-            console.log(r.data.sprites.other.home.front_default)
+            setImg(r.data.sprites.other['official-artwork'].front_default)
         })
         .catch((e)=>console.log(e), [])
     })

@@ -9,11 +9,11 @@ export const PokedexButton = styled.button`
     font-weight: 700;
     font-size: 20px;
     border: 0;
-    width: 15%;   
+    width: 17%;   
     position: absolute;
     right: 2%;
     top: 30%;
-    height: 8vh;
+    height: 9vh;
     border-radius: 12px;
     transition: 0.5s;
     :hover{
