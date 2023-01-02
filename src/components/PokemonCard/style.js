@@ -2,33 +2,35 @@ import styled from "styled-components";
 
 export const SectionMain = styled.section`
     position: relative;
-    img{
+`
+
+export const PokemonPhoto = styled.img `
         position: absolute;
         z-index: 1;
         left: 55%;
         bottom: 50%;
-    }
+`
+
+export const PokeballBack = styled.img `
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 35%;
 `
 
 export const Card = styled.section `
     font-family: "Poppins", 'Courier New', Courier, monospace;
     background-color: #71C3FF;
-    min-width: 29vw;
+    min-width: 30vw;
     min-height: 25vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-right: 30px;
     gap: 14px;
     padding-bottom: 10px;
     padding-top: 12px;
-    img{
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 35%;
-    }
     header{
         span{
             font-size: 12px;
@@ -72,7 +74,10 @@ export const Card = styled.section `
 export const Grass = styled.section `
     height: 10%;
     background-color: #70B873;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -80,13 +85,15 @@ export const Grass = styled.section `
     color: #FFFF;
     border: 1px dashed #FFFF;
     border-radius: 8px;
-    align-items: center;
 `
 
 export const Poison = styled.section `
     height: 10%;
     background-color: #AD61AE;
-    width: 20%;
+    min-width: 30%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -99,7 +106,10 @@ export const Poison = styled.section `
 export const Fire = styled.section `
     height: 10%;
     background-color: #F44900;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -113,7 +123,10 @@ export const Fire = styled.section `
 export const Flying = styled.section `
     height: 10%;
     background-color: #6892B0;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -126,7 +139,10 @@ export const Flying = styled.section `
 export const Water = styled.section `
     height: 10%;
     background-color: #33A4F5;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -140,7 +156,10 @@ export const Water = styled.section `
 export const Bug = styled.section `
     height: 10%;
     background-color: #316520;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
@@ -150,10 +169,14 @@ export const Bug = styled.section `
     border-radius: 8px;
     align-items: center;
 `
+
 export const Normal = styled.section `
     height: 10%;
     background-color: #8a8a8a;
-    width: 20%;
+    max-width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     z-index: 1;
     font-family: "Poppins", 'Courier New', Courier, monospace;
