@@ -4,6 +4,9 @@ export const PokedexStyleDetail = styled.section `
     padding-top: 10vh;
     padding-left: 50px;
     padding-bottom: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     p{
         font-size: 3vw;
         font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';

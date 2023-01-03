@@ -8,7 +8,7 @@ import { ApiContext } from '../../context/ApiContext';
 export const PokemonListPage = () => {
 
     const context = useContext(GlobalContext);
-    const {setNameButton} = context
+    const {setNameButton, setPokemonDetail} = context
     setNameButton('Pokédex')
 
     const [pokemonList] = useRequestDataApi('')

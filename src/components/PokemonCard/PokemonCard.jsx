@@ -144,7 +144,7 @@ export const PokemonCard = () => {
                 </article>
 
                 <article>
-                    <button onClick={() => changeToDetails(navigate)}>Detalhes</button>
+                    <button onClick={() => changeToDetails(navigate, pokemon.name)}>Detalhes</button>
                     <button onClick={capturedPokemon}>{capture}</button>
                 </article>
             </Card>

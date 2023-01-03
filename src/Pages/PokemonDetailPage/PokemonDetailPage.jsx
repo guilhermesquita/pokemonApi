@@ -5,8 +5,10 @@ import pokeballBack from '../../assets/pngwing.svg'
 
 export const PokemonDetailPage = () =>{
 
+    //const
+
     const context = useContext(GlobalContext);
-    const {setNameButton} = context
+    const {setNameButton, pokemonDetail} = context
     setNameButton('Excluir da Pokedex')
 
     return(
@@ -16,7 +18,7 @@ export const PokemonDetailPage = () =>{
 
                 <section>
                     <article>
-                        img front
+                        img front   
                     </article>
 
                     <article>
@@ -30,7 +32,7 @@ export const PokemonDetailPage = () =>{
 
                 <section>
                     <article>
-                        nomePokemon
+                        NAME
                     </article>
 
                     <article>
