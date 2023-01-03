@@ -18,14 +18,13 @@ export const PokemonCard = () => {
 
     //GlobalContext
     const context = useContext(GlobalContext)
-    const { capture, capturedPokemon } = context
+    const { capture, capturedPokemon, setName } = context
 
     //ApiContext
     const apiContext = useContext(ApiContext)
     const { pokemon, id } = apiContext
 
     /////////
-
     const [listPokemon, pokemonImgMain, skills1, skills2] = useRequestDataApi(id)
 
     //Router-dom useNavigate()
@@ -144,7 +143,7 @@ export const PokemonCard = () => {
                 </article>
 
                 <article>
-                    <button onClick={() => changeToDetails(navigate, pokemon.name)}>Detalhes</button>
+                    <button onClick={() => changeToDetails(navigate, pokemon.name, setName)}>Detalhes</button>
                     <button onClick={capturedPokemon}>{capture}</button>
                 </article>
             </Card>
