@@ -14,6 +14,12 @@ export const PokedexStyleDetail = styled.section `
         font-weight: 600;
     }
 `
+export const PokeballBack = styled.img `
+    position: absolute;
+    right: 0;
+    top: 0;
+`
+
 export const Grass = styled.main `
     display: flex;  
     width: 95%;
@@ -22,11 +28,6 @@ export const Grass = styled.main `
     border-radius: 20px;
     align-items: center;
     position: relative;
-    img{
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
     section:nth-child(1){
         display: flex;
         flex-direction: column;
@@ -36,7 +37,7 @@ export const Grass = styled.main `
         justify-content: center;
         article{
             background-color: white;
-            min-height: 28vh;
+            max-height: 32vh;
             border-radius: 5px;
             height: 98%;
             width: 15vw;
@@ -48,10 +49,18 @@ export const Grass = styled.main `
     section:nth-child(2){
         display: flex;
         flex-direction: column;
-        height: 60vh;
+        height: 67vh;
         width: 20vw;
         background-color: white;
         border-radius: 5px;
+        padding-left: 20px;
+        font-family: "Poppins", 'Courier New', Courier, monospace;
+        padding-top: 10px;
+        padding-bottom: 70px;
+        h3{
+            border-bottom: 1px solid #e8e5e5;
+            width: 90%;
+        }
     }
     section:nth-child(3){
         display: flex;
@@ -65,6 +74,9 @@ export const Grass = styled.main `
             height: 30%;
             border-radius: 5px;
             width: 15vw;
+            p:nth-child(1){
+                font-size: 12px;
+            }
         }
         article:nth-child(2){
             border-radius: 5px;
@@ -73,4 +85,21 @@ export const Grass = styled.main `
             height: 70%;
         }
     }
+`
+export const StatsStyle = styled.article `
+    display: flex;
+    font-size: 12px;
+    border-bottom: 1px solid #e8e5e5;
+    width: 90%;
+    gap: 60px;
+    align-items: center;
+`
+export const Hability = styled.div `
+    font-size: 12px;
+    color: #6b6b6b;
+    width: 2%;
+`
+export const Over = styled.div `
+    font-size: 12px;
+    color: black;
 `

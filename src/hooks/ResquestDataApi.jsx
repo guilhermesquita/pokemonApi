@@ -7,6 +7,9 @@ export const useRequestDataApi = (id) => {
     const [skills1, setSkills1] = useState([])
     const [skills2, setSkills2] = useState([])
     const [img, setImg] = useState([{}])
+    const [frontImg, setFrontImg] = useState([{}])
+    const [backImg, setBackImg] = useState([{}])
+    const [baseStats, setBaseStats] = useState([{}])
 
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -19,9 +22,12 @@ export const useRequestDataApi = (id) => {
                 setSkills1(r.data.types[0].type)    
             }
             setImg(r.data.sprites.other['official-artwork'].front_default)
+            setBackImg(r.data.sprites.back_default)
+            setFrontImg(r.data.sprites.front_default)
+            setBaseStats(r.data.stats)
         })
         .catch((e)=>console.log(e), [])
     })
 
-    return [pokemons, img, skills1, skills2]
+    return [pokemons, img, skills1, skills2, frontImg, backImg, baseStats]
 }
