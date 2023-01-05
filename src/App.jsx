@@ -12,6 +12,7 @@ function App() {
   const [nameButton, setNameButton] = useState("Pokédex")
   const [capture, setCapture] = useState('Capturar!')
   const [name, setName] = useState('')
+  const [idPok, setIdPok] = useState('')
 
   const capturedPokemon = () => {
     capture === 'Capturar!' ? setCapture('Capturado!') : setCapture('Capturar!')
@@ -23,7 +24,9 @@ function App() {
     capture: capture,
     capturedPokemon: capturedPokemon,
     name: name,
-    setName: setName
+    setName: setName,
+    idPok: idPok,
+    setIdPok: setIdPok
   }
 
   return(

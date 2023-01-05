@@ -9,10 +9,12 @@ export const PokemonDetailPage = () => {
     //const
 
     const context = useContext(GlobalContext);
-    const { setNameButton, name } = context
+    const { setNameButton, name, idPok } = context
     setNameButton('Excluir da Pokedex')
 
-    const [pokemonList] = useRequestDataApi('')
+    const [pokemonList] = useRequestDataApi('');
+    const [listPokemon, pokemonImgMain, skills1, skills2] = useRequestDataApi(idPok)
+
 
     return (
         <PokedexStyleDetail>
@@ -22,10 +24,10 @@ export const PokemonDetailPage = () => {
                 return pokemon.name === name
             })
             .map((pokemon, index) => {
-                return (<Grass>
+                return (<Grass key={index}>
                     <section>
                         <article>
-                            img front
+                            <img src={pokemonImgMain}/> 
                         </article>
 
                         <article>
@@ -39,6 +41,7 @@ export const PokemonDetailPage = () => {
 
                     <section>
                         <article>
+                            #0{idPok}
                             {name}
                         </article>
 

@@ -18,7 +18,7 @@ export const PokemonCard = () => {
 
     //GlobalContext
     const context = useContext(GlobalContext)
-    const { capture, capturedPokemon, setName } = context
+    const { capture, capturedPokemon, setName, setIdPok } = context
 
     //ApiContext
     const apiContext = useContext(ApiContext)
@@ -143,7 +143,7 @@ export const PokemonCard = () => {
                 </article>
 
                 <article>
-                    <button onClick={() => changeToDetails(navigate, pokemon.name, setName)}>Detalhes</button>
+                    <button onClick={() => changeToDetails(navigate, pokemon.name, setName, id, setIdPok)}>Detalhes</button>
                     <button onClick={capturedPokemon}>{capture}</button>
                 </article>
             </Card>
