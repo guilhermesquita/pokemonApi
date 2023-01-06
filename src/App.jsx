@@ -10,23 +10,26 @@ import { BrowserRouter } from "react-router-dom"
 function App() {
 
   const [nameButton, setNameButton] = useState("Pokédex")
-  const [capture, setCapture] = useState('Capturar!')
   const [name, setName] = useState('')
   const [idPok, setIdPok] = useState('')
+  const [pokedex, setPokedex] = useState([])
 
-  const capturedPokemon = () => {
-    capture === 'Capturar!' ? setCapture('Capturado!') : setCapture('Capturar!')
+  const addToPokedex = (listPokemon, id) => {
+    const index = id - 1
+    const clonePokedex = [...pokedex, listPokemon[index]]
+    setPokedex(clonePokedex);
+    console.log(pokedex)
   }
 
   const context = {
     nameButton: nameButton,
     setNameButton: setNameButton,
-    capture: capture,
-    capturedPokemon: capturedPokemon,
     name: name,
     setName: setName,
     idPok: idPok,
-    setIdPok: setIdPok
+    setIdPok: setIdPok,
+    addToPokedex: addToPokedex,
+    pokedex: pokedex
   }
 
   return(

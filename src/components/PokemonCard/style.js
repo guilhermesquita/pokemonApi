@@ -67,6 +67,9 @@ export const Card = styled.section `
             height: 32px;
             border: none;
             border-radius: 5px;
+            :hover{
+                cursor: pointer;
+            }
         }
     }
 `

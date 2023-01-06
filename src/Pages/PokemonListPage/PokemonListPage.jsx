@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {PokemonCard} from '../../components/PokemonCard/PokemonCard'
 import { GlobalContext } from '../../context/GlobalContext';
 import {ListPage} from './style'
@@ -8,16 +8,25 @@ import { ApiContext } from '../../context/ApiContext';
 export const PokemonListPage = () => {
 
     const context = useContext(GlobalContext);
-    const { setNameButton } = context
+    const { setNameButton, pokedex } = context
     setNameButton('Pokédex')
 
     const [pokemonList] = useRequestDataApi('')
     
+    const pokedexClone = [...pokedex]
+
+    for(let i = 0; i<20; i++){
+        pokedexClone.push(i)
+    }
+
     return(
         <ListPage>
             <p>Todos Pokémons</p>
             <article>
-               {pokemonList.map((pokemon, index)=>{
+               {pokemonList.filter((pokemon, index)=>{
+                    return pokedex.length === 0 ? <></> : pokemon.name !== pokedexClone[index].name
+               })
+               .map((pokemon, index)=>{
 
                     const apiContext = 
                     {
