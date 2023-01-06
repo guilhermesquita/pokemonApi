@@ -8,7 +8,7 @@ import { ApiContext } from '../../context/ApiContext';
 export const PokemonListPage = () => {
 
     const context = useContext(GlobalContext);
-    const { setNameButton, pokedex } = context
+    const { setNameButton, pokedex, idPok } = context
     setNameButton('Pokédex')
 
     const [pokemonList] = useRequestDataApi('')
@@ -24,7 +24,7 @@ export const PokemonListPage = () => {
             <p>Todos Pokémons</p>
             <article>
                {pokemonList.filter((pokemon, index)=>{
-                    return pokedex.length === 0 ? <></> : pokemon.name !== pokedexClone[index].name
+                    return pokedex.length === 0 ? <></> : pokemon !== idPok
                })
                .map((pokemon, index)=>{
 

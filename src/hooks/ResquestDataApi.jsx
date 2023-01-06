@@ -10,11 +10,13 @@ export const useRequestDataApi = (id) => {
     const [frontImg, setFrontImg] = useState([{}])
     const [backImg, setBackImg] = useState([{}])
     const [baseStats, setBaseStats] = useState([{}])
+    const [idPokemon, setIdPokemon] = useState()
 
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((r)=>{
             setPokemons(r.data.results)
+            setIdPokemon(r.data.id)
            if(r.data.types.length == 2){
                 setSkills1(r.data.types[0].type)
                 setSkills2(r.data.types[1].type)
@@ -29,5 +31,5 @@ export const useRequestDataApi = (id) => {
         .catch((e)=>console.log(e), [])
     })
 
-    return [pokemons, img, skills1, skills2, frontImg, backImg, baseStats]
+    return [pokemons, idPokemon, img, skills1, skills2, frontImg, backImg, baseStats]
 }

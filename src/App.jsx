@@ -15,7 +15,9 @@ function App() {
   const [pokedex, setPokedex] = useState([])
 
   const addToPokedex = (listPokemon, id) => {
-    const index = id - 1
+    const identify = id
+    setIdPok(id)
+    const index = identify - 1
     const clonePokedex = [...pokedex, listPokemon[index]]
     setPokedex(clonePokedex);
     console.log(pokedex)
@@ -29,7 +31,7 @@ function App() {
     idPok: idPok,
     setIdPok: setIdPok,
     addToPokedex: addToPokedex,
-    pokedex: pokedex
+    pokedex: pokedex,
   }
 
   return(

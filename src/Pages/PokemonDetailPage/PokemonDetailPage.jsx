@@ -13,7 +13,7 @@ export const PokemonDetailPage = () => {
     setNameButton('Excluir da Pokedex')
 
     const [pokemonList] = useRequestDataApi('');
-    const [listPokemon, pokemonImgMain, skills1, skills2, frontImg, backImg, baseStats] = useRequestDataApi(idPok)
+    const [listPokemon, id, pokemonImgMain, skills1, skills2, frontImg, backImg, baseStats, totalOver] = useRequestDataApi(idPok)
 
     const changeColorCard = () => {
         if (skills1.name === 'grass') {
@@ -47,7 +47,7 @@ export const PokemonDetailPage = () => {
                                     )
                                 })}
                                 <StatsStyle>
-                                    Total:
+                                    Total: {totalOver}
                                 </StatsStyle>
                             </section>
 

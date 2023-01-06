@@ -26,7 +26,7 @@ export const PokemonCard = () => {
     const { pokemon, id } = apiContext
 
     /////////
-    const [listPokemon, pokemonImgMain, skills1, skills2] = useRequestDataApi(id)
+    const [listPokemon, idPokemon, pokemonImgMain, skills1, skills2] = useRequestDataApi(id)
     const [pokemonList] = useRequestDataApi('')
 
     //Router-dom useNavigate()
@@ -145,7 +145,7 @@ export const PokemonCard = () => {
 
                     <article>
                         <button onClick={() => changeToDetails(navigate, pokemon.name, setName, id, setIdPok)}>Detalhes</button>
-                        <button onClick={() => addToPokedex(pokemonList, id)}>Capturar!</button>
+                        <button onClick={() => addToPokedex(pokemonList, idPokemon)}>Capturar!</button>
                     </article>
                 </CardGrass>)
         }
@@ -222,7 +222,7 @@ export const PokemonCard = () => {
 
                     <article>
                         <button onClick={() => changeToDetails(navigate, pokemon.name, setName, id, setIdPok)}>Detalhes</button>
-                        <button onClick={() => addToPokedex(pokemonList, id)}>Capturar!</button>
+                        <button onClick={() => addToPokedex(pokemonList, idPokemon)}>Capturar!</button>
                     </article>
                 </Card>)
         }
