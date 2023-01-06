@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import {Route, Routes } from "react-router-dom"
 import {PokemonListPage} from '../pages/PokemonListPage/PokemonListPage'
 import {PokedexPage} from '../pages/PokedexPage/PokedexPage'
 import {PokemonDetailPage} from '../pages/PokemonDetailPage/PokemonDetailPage'
